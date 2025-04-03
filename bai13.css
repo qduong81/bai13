@@ -1,0 +1,105 @@
+
+.container{
+    height: 100vh;
+display: grid;
+grid-template-areas: 
+"header header header"
+"aside1 noidung aside2"
+"footer footer footer"
+;
+grid-template-rows: 45px auto 35px;
+grid-template-columns: 1fr 6fr 1fr;
+}
+.header{
+    background-color: brown;
+    grid-area: header;
+}
+.Aside1{
+    background-color: aquamarine;
+    grid-area: aside1;
+}
+.Aside2{
+    background-color: aqua;
+    grid-area: aside2;
+}
+.noidung{
+    background-color: blueviolet;
+    grid-area: noidung;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.footer{
+    background-color: blanchedalmond;
+    grid-area: footer;
+}
+.box{
+    text-align: center;
+    line-height: 30px;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1200px){
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "noidung noidung"
+        "aside1 aside2"
+        "footer footer"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 40px 1fr 1fr 35px;
+    }
+        .header{
+            grid-area: header;
+
+        }
+        .noidung{
+            grid-area: noidung;
+            padding-top: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .Aside1{
+            grid-area: aside1;
+        }
+        .Aside2{
+            grid-area: aside2;
+        }
+        .footer{
+            grid-area: footer;
+        }
+}
+@media only screen and (max-width: 600px){
+    .container{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "noidung"
+        "aside1"
+        "aside2"
+        "footer"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 45px 1fr 1fr 1fr 35px;
+    }
+    .header{
+        grid-area: header;
+
+    }
+    .noidung{
+        grid-area: noidung;
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .Aside1{
+        grid-area: aside1;
+    }
+    .Aside2{
+        grid-area: aside2;
+    }
+    .footer{
+        grid-area: footer;
+    }
+}
